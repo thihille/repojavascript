@@ -53,10 +53,6 @@ var injectHtmlHubxp = `
     <nav>nav</nav>
     <div class="overlay"></div>
   </div>
-  <div class="content">
-    <img src="https://placeimg.com/720/250/people" alt="" class="">
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse eget nulla mollis, efficitur urna nec, viverra dolor. Nulla facilisi. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Praesent efficitur finibus eros sit amet sagittis. Ut sollicitudin sodales neque et volutpat. Curabitur dictum ante vel fermentum volutpat. Curabitur ac neque et erat viverra egestas.</p>
-  </div>
 `;
 
 document.body.innerHTML = injectHtmlHubxp;
