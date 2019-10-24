@@ -1,3 +1,4 @@
+alert('rodou');
 var injectCssHubxp = `
   <style>
     body {
