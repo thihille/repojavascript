@@ -54,7 +54,7 @@ var injectHtmlHubxp = `
   </div>
 `;
 
-document.body.innerHTML = injectHtmlHubxp;
+document.body.innerHTML += injectHtmlHubxp;
 document.getElementsByTagName('head')[0].innerHTML += injectCssHubxp; 
 
 var menu = document.querySelector(".hpx-menu");
