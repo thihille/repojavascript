@@ -77,5 +77,6 @@ menu.addEventListener('mouseleave',function(){
   const transition = document.querySelector('.animate-out');
   transition.addEventListener('transitionend', () => {
     menu.nextElementSibling.classList.remove('animate-out');
+    document.body.classList.contains('hidden-scroll') ? document.body.classList.remove('hidden-scroll') : '';
   });
 });
