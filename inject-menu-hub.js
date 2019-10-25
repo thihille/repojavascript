@@ -2,7 +2,6 @@
   let injectHeader = () => {
     script = d.createElement('script');
     script.type = 'text/javascript';
-    script.async = true;
     script.src = "https://cdn.jsdelivr.net/gh/thihille/repojavascript@feature/inject/inject-hubxp.js";
     d.getElementsByTagName('head')[0].appendChild(script);
   };

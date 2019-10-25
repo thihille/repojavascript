@@ -48,24 +48,32 @@ var injectCssHubxp = `
 `;
 
 var injectHtmlHubxp = `
-  <div class="hpx-menu" onmouseover="document.body.classList.add('teste');" onmouseout="document.body.classList.remove('teste');">
+  <div class="hpx-menu">
     <nav>nav</nav>
     <div class="overlay"></div>
   </div>
 `;
 
+var countDivs = document.body.childElementCount;
 document.body.innerHTML += injectHtmlHubxp;
 document.getElementsByTagName('head')[0].innerHTML += injectCssHubxp; 
 
 var menu = document.querySelector(".hpx-menu");
 menu.addEventListener('mouseover',function(){
+  for(var x = 0; x < countDivs; x++){
+    document.body.children[x].nodeName == "div" ? (
+      document.body.children[x].classList.add('animate-in')
+    ) : '';
+  }
   document.body.classList.add('hidden-scroll');
-  menu.nextElementSibling.classList.add("animate-in");
-  const transition = document.querySelector('.animate-in');
 });
 menu.addEventListener('mouseleave',function(){
-  menu.nextElementSibling.classList.remove('animate-in');
-  menu.nextElementSibling.classList.add("animate-out");
+  for(var x = 0; x < countDivs; x++){
+    document.body.children[x].nodeName == "div" ? (
+      document.body.children[x].classList.remove('animate-in'),
+      document.body.children[x].classList.add('animate-out')
+    ) : '';
+  }
   const transition = document.querySelector('.animate-out');
   transition.addEventListener('transitionend', () => {
     menu.nextElementSibling.classList.remove('animate-out');
